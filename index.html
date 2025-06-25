@@ -3,27 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Live Weather App</title>
+  <title>Weather App</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>🌤️ Live Weather</h1>
-    <form id="search-form">
-      <input type="text" id="city-input" placeholder="Enter a city..." required />
-      <button type="submit">Search</button>
-    </form>
+  <div class="weather-app">
+    <header>
+      <form id="search-form">
+        <input type="text" id="city-input" placeholder="Search for a city..." required />
+        <button type="submit">Search</button>
+      </form>
+    </header>
 
-    <div id="weather" class="hidden">
-      <h2 id="city-name"></h2>
-      <img id="weather-icon" src="" alt="Weather Icon" />
-      <p id="temperature"></p>
-      <p id="description"></p>
-      <p id="wind"></p>
-    </div>
+    <main>
+      <h1 id="city-name">Weather</h1>
+      <div class="weather-box">
+        <div class="temp-icon">
+          <img id="weather-icon" src="" alt="icon" />
+          <span id="temperature">0</span><span class="unit">°C</span>
+        </div>
+        <p id="description">--</p>
+        <p id="wind">--</p>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        Coded by <strong>Christine</strong> 🌸 |
+        <a href="https://github.com/ChristineP578/weather-app" target="_blank">GitHub</a> |
+        <a href="https://wondrous-kitsune-8e200d.netlify.app/" target="_blank">Live Site</a>
+      </p>
+    </footer>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
